@@ -34,10 +34,8 @@ function App() {
     setHeroes(heroes.concat(newHero))
   }
     
-
-
   return (
-    <div>
+    <div className="container">
       <h1>Avengers Tryouts</h1>
 
       <form onSubmit={submit}>
@@ -71,7 +69,7 @@ function App() {
       </form>
 
       {heroes.map(hero => {
-        return <div key={hero.email}>Name: {hero.name}, Hero name: {hero.heroName}, Email: {hero.email}</div>
+        return <div className="hero-card" key={hero.email}><b>Name:</b> {hero.name}, <b>Hero name:</b> {hero.heroName}, <b>Email:</b> {hero.email}</div>
       })}
 
     </div>
